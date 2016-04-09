@@ -3,4 +3,4 @@ This application retrieves user information from a simple form and passes it to 
 #Web Pitfalls
 This is my first time connecting to an API.   It is also my first time connecting to something via JavaScript.  I chose javascript because I feel the page appears more cleaner with the majority of the work being handled on the client side.  I could have handled error checking better.  I saw that you send data back if it is in the incorrect format.  I attempted to parse through that information, but ended up just going for a simple check on the textbox inputs.
 #Use
-Download the solution and open it in Visual Studio to test.
+Please download the repo and run the solution in visual studio.
