@@ -39,8 +39,9 @@
     fico = "601";
     annRev = "99000";
     grossPerc = "85";
-    //type = "AutoRepair";
+    type = "AutoRepair";
 
+    //Formats text properly.
     grossPerc = grossPerc.replace("%", "");
     annRev = annRev.replace(",", "");
     annRev = annRev.replace("$", "");

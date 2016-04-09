@@ -6,9 +6,9 @@
 <head runat="server">
     <title>Kabbage Test</title>
 
-    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 
-    <script language="javascript" type="text/javascript" src="scripts/KababgeTest_Main.js"></script>
+    <script lang="javascript" type="text/javascript" src="scripts/KabbageTest_Main.js"></script>
 
 </head>
 <body>
@@ -119,7 +119,7 @@
 
                 <tr>
                     <td colspan="2" style="text-align:center;">
-                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
+                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClientClick="btnSubmit_Click(); return false;" />
                         <asp:Button ID="btnClear" runat="server" Text="Clear" />
                     </td> 
                 </tr>

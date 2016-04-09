@@ -15,3 +15,4 @@ C:\Users\Andrew_Desktop\Desktop\KabbageTest\KabbageTest\KabbageTest\bin\KabbageT
 C:\Users\Andrew_Desktop\Desktop\KabbageTest\KabbageTest\KabbageTest\bin\KabbageTest.pdb
 C:\Users\Andrew_Desktop\Desktop\KabbageTest\KabbageTest\KabbageTest\obj\Debug\KabbageTest.dll
 C:\Users\Andrew_Desktop\Desktop\KabbageTest\KabbageTest\KabbageTest\obj\Debug\KabbageTest.pdb
+C:\Users\Andrew_Desktop\Desktop\KabbageTest\KabbageTest\KabbageTest\obj\Debug\KabbageTest.csprojResolveAssemblyReference.cache
