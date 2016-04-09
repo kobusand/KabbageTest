@@ -13,6 +13,5 @@ C:\Users\Andrew_Desktop\Desktop\KabbageTest\KabbageTest\KabbageTest\bin\roslyn\V
 C:\Users\Andrew_Desktop\Desktop\KabbageTest\KabbageTest\KabbageTest\bin\KabbageTest.dll.config
 C:\Users\Andrew_Desktop\Desktop\KabbageTest\KabbageTest\KabbageTest\bin\KabbageTest.dll
 C:\Users\Andrew_Desktop\Desktop\KabbageTest\KabbageTest\KabbageTest\bin\KabbageTest.pdb
-C:\Users\Andrew_Desktop\Desktop\KabbageTest\KabbageTest\KabbageTest\obj\Debug\KabbageTest.csprojResolveAssemblyReference.cache
 C:\Users\Andrew_Desktop\Desktop\KabbageTest\KabbageTest\KabbageTest\obj\Debug\KabbageTest.dll
 C:\Users\Andrew_Desktop\Desktop\KabbageTest\KabbageTest\KabbageTest\obj\Debug\KabbageTest.pdb
