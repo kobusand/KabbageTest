@@ -139,7 +139,7 @@
             </div>  
                 
             <div id="resultsButtons" class="resultsButtons">
-                <asp:Button ID="btnSignup" runat="server" Text="Sign Up" Width="80px" OnClientClick="btnSignUp_Click();"/>
+                <asp:Button ID="btnSignup" runat="server" Text="Apply Now" Width="80px" OnClientClick="btnSignUp_Click();"/>
                 <asp:Button ID="btnClose" runat="server" Text="Close" Width="80px" OnClientClick="btnClose_Click(); return false;" />
             </div> 
 

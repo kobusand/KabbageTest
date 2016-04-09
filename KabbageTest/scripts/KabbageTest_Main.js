@@ -207,7 +207,7 @@ function ShowQualifiedFail() {
 
     controlID = "lblResultsFailure";
     label = document.getElementById(controlID);
-    label.innerHTML = "We regret to inform you that you did not qualify.";
+    label.innerHTML = "Unfortunately you don't qualify for a Kabbage loan at this time.";
 }
 
 function btnClose_Click() {
