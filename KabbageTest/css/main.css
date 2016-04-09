@@ -1,2 +1,18 @@
-﻿body {
+﻿#header
+{
+    text-decoration:underline;
+    font-size:20px;
+    padding-left: 100px;
+}
+
+/************MAIN form******************/
+.formContent{
+
+}
+
+.itemLabel   
+{
+    text-align:right;
+    width:200px;
+    padding: 5px;
 }
