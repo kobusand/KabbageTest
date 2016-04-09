@@ -125,6 +125,39 @@
                 </tr>
             </table>
        </div>
+
+       <div id="results" class="results_Hidden">
+            <div id="resultsHeader" class="resultsHeader">
+                <asp:Label ID="lblResultsDesc" runat="server" />
+            </div>
+
+            <br />
+            <br />
+                        
+            <div id="resultsContent" class="resultsContent">
+                <asp:Label ID="lblQualAmount" runat="server" />
+            </div>  
+                
+            <div id="resultsButtons" class="resultsButtons">
+                <asp:Button ID="btnSignup" runat="server" Text="Sign Up" Width="80px" OnClientClick="btnSignUp_Click();"/>
+                <asp:Button ID="btnClose" runat="server" Text="Close" Width="80px" OnClientClick="btnClose_Click(); return false;" />
+            </div> 
+
+           <asp:HiddenField ID="hdnRedirect" runat="server" />
+       </div>
+
+       <div id="results_Failure" class="results_Hidden">
+            <div id="results_Failure_Header" class="resultsHeader">
+                <asp:Label ID="lblResultsFailure" runat="server" />
+            </div>
+
+            <br />
+            <br />
+
+            <div id="results_Failure_Buttons" class="resultsButtonsFailure">
+                <asp:Button ID="btnCloseFailure" runat="server" Text="Close" Width="80px" OnClientClick="btnClose_Click(); return false;" />
+            </div> 
+       </div>
     </form>
 </body>
 </html>

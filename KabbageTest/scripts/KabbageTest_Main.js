@@ -119,7 +119,114 @@ function validateData(firstName, lastName, email, busName, phone, type, year, fi
 }
 
 function getKabbageQual(firstName, lastName, email, busName, phone, type, year, fico, annRev, grossPerc) {
+    var apiKey = "vauwg9sbqkrdnzdmr7eyk92t"
+    var xhttp = new XMLHttpRequest();
+    var api = "https://api.kabbage.com/v2/prequalify";
+    var jsonResponse = null;
+    var qual = "";
+    var amount = "";
+    var qualUrl = "";
+    var url = "?"
 
+    //Creates URL string
+    url = url + "&firstName=" + encodeURIComponent(firstName);
+    url = url + "&lastName=" + encodeURIComponent(lastName);
+    url = url + "&emailAddress=" + encodeURIComponent(email);
+    url = url + "&businessName=" + encodeURIComponent(busName);
+    url = url + "&phoneNumber=" + encodeURIComponent(phone);
+    url = url + "&yearStarted=" + encodeURIComponent(year);
+    url = url + "&estimatedFICO=" + encodeURIComponent(fico);
+    url = url + "&estimatedAnnualRevenue=" + encodeURIComponent(annRev);
+    url = url + "&grossPercentageFromCards=" + encodeURIComponent(grossPerc);
+    url = url + "&typeOfBusiness=" + encodeURIComponent(type);
+    url = url + "&api_key=" + encodeURIComponent(apiKey);
+
+    //Sends data to API
+    xhttp.open("POST", api, false);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.setRequestHeader("Cache-Control", "no-cache")
+    xhttp.send(url);
+
+    //Parse data to JSON
+    jsonResponse = JSON.parse(xhttp.responseText);
+    qual = jsonResponse["Qualified"];
+    amount = jsonResponse["QualifyAmount"];
+    qualUrl = jsonResponse["RedirectUrl"];
+
+    //If success show succcess window else show failure window
+    if (qual == true) {
+        ShowQualifiedSuccess(firstName, amount, qualUrl);
+    }
+    else {
+        ShowQualifiedFail();
+    }
 }
+
+
+function ShowQualifiedSuccess(firstName, qualAmount, url) {
+    var controlID = "";
+    var div = null;
+    var label = null;
+    var hiddenField = null;
+
+    controlID = "results";
+    div = document.getElementById(controlID);
+    div.className = "results";
+
+    controlID = "formContent";
+    div = document.getElementById(controlID);
+    div.className = "formContent_Hidden"
+
+    controlID = "lblResultsDesc";
+    label = document.getElementById(controlID);
+    label.innerHTML = "Congratulations " + firstName + ",  you qualified!";
+
+    controlID = "lblQualAmount";
+    label = document.getElementById(controlID);
+    label.innerHTML = "Qualified Amount: $" + qualAmount;
+
+    //Retrieves Redirect URL from hidden field
+    controlID = "hdnRedirect";
+    hiddenField = document.getElementById(controlID);
+    hiddenField.value = url;
+}
+
+function ShowQualifiedFail() {
+    var controlID = "";
+    var div = null;
+    var label = null;
+    var button = null;
+
+    controlID = "results_Failure";
+    div = document.getElementById(controlID);
+    div.className = "results";
+
+    controlID = "formContent";
+    div = document.getElementById(controlID);
+    div.className = "formContent_Hidden"
+
+    controlID = "lblResultsFailure";
+    label = document.getElementById(controlID);
+    label.innerHTML = "We regret to inform you that you did not qualify.";
+}
+
+function btnClose_Click() {
+    var controlID = "";
+    var div = null;
+
+    controlID = "results";
+    div = document.getElementById(controlID);
+    div.className = "results_Hidden";
+
+    controlID = "results_Failure";
+    div = document.getElementById(controlID);
+    div.className = "results_Hidden";
+
+    controlID = "formContent";
+    div = document.getElementById(controlID);
+    div.className = "formContent"
+}
+
+
 
 
